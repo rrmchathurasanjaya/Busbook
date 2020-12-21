@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -39,6 +40,7 @@ public class booking extends javax.swing.JFrame implements MouseListener {
         lbl10.addMouseListener(this);
         lbl11.addMouseListener(this);
         lbl12.addMouseListener(this);
+        connect();
     }
 
       int seatno=0;
@@ -173,6 +175,11 @@ public class booking extends javax.swing.JFrame implements MouseListener {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("Book");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 110, 50));
         getContentPane().add(txtdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 360, 170));
 
@@ -185,6 +192,15 @@ public class booking extends javax.swing.JFrame implements MouseListener {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String customer = txtcust.getText();
+        int seats1 = seatno;
+        String price = txtprice.getText();
+        
+        SimpleDateFormat date_form = new SimpleDateFormat("yyyy-MM-dd");
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
