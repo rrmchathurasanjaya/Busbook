@@ -1,5 +1,6 @@
 
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 /*
@@ -33,6 +34,7 @@ public class booking extends javax.swing.JFrame implements MouseListener {
         lbl12.addMouseListener(this);
     }
 
+      int seatno=0;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -225,6 +227,9 @@ public class booking extends javax.swing.JFrame implements MouseListener {
     public void mouseClicked(MouseEvent e) {
         
         if(e.getSource() == lbl1  )
+        {
+           seatno = 1;
+        }            
         
         
         
