@@ -226,12 +226,56 @@ public class booking extends javax.swing.JFrame implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         
-        if(e.getSource() == lbl1  )
+        if(e.getSource() == lbl1)
         {
            seatno = 1;
-        }            
+        }    
+        else if(e.getSource() == lbl2)        
+        {
+           seatno = 2;
+        }
+        else if(e.getSource() == lbl3)        
+        {
+           seatno = 3;
+        }
+        else if(e.getSource() == lbl4)        
+        {
+           seatno = 4;
+        }
+        else if(e.getSource() == lbl5)        
+        {
+           seatno = 5;
+        }
+        else if(e.getSource() == lbl6)        
+        {
+           seatno = 6;
+        }
+        else if(e.getSource() == lbl7)        
+        {
+           seatno = 7;
+        }
+        else if(e.getSource() == lbl8)        
+        {
+           seatno = 8;
+        }
+        else if(e.getSource() == lbl9)        
+        {
+           seatno = 9;
+        }
+        else if(e.getSource() == lbl10)        
+        {
+           seatno = 10;
+        }
+        else if(e.getSource() == lbl1)        
+        {
+           seatno = 11;
+        }
+        else if(e.getSource() == lbl12)        
+        {
+           seatno = 12;
+        }
         
-        
+       
         
         
         
