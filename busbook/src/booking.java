@@ -222,6 +222,11 @@ public class booking extends javax.swing.JFrame implements MouseListener {
             pst.setString(4, date);
             int k = pst.executeUpdate();
             
+            if(k==1)
+            {
+               JOptionPane.showMessageDialog(this, "Seat Booked ");
+            }
+            
            }
             
 
