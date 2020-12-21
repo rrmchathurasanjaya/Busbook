@@ -3,10 +3,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -25,6 +29,7 @@ public class Check extends javax.swing.JFrame {
      */
     public Check() {
         initComponents();
+        connect();
        
     }
       Connection con;
@@ -61,7 +66,6 @@ public class Check extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         txtdate = new com.toedter.calendar.JDateChooser();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -90,6 +94,7 @@ public class Check extends javax.swing.JFrame {
         getContentPane().add(txtdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 250, 30));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -102,7 +107,33 @@ public class Check extends javax.swing.JFrame {
              pst.setString(1, date);
              rs = pst.executeQuery();  
              
-            if(rs.)
+            if(rs.next()==false)
+            {
+            JOptionPane.showMessageDialog(this, "No Seat Booked!");
+            
+            }
+            else
+            {
+            ResultSetMetaData rsd = rs.getMetaData();
+            int c = rsd.getColumnCount();
+            DefaultTableModel d = (DefaultTableModel)jTable1.getModel();
+            d.setRowCount(0);
+            
+            while(rs.next())
+            {
+            
+            Vector v2 = new Vector();
+            for(int i=1; i<c; i++)
+            {
+              v2.add(rs.getString("id"));
+              v2.add(rs.getString("cname"));
+              v2.add(rs.getString("seatno"));
+              v2.add(rs.getString("price"));
+            }
+            d.addRow(v2);
+            }
+          
+            }
              
         } catch (SQLException ex) {
             Logger.getLogger(Check.class.getName()).log(Level.SEVERE, null, ex);
