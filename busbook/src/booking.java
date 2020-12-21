@@ -42,6 +42,7 @@ public class booking extends javax.swing.JFrame implements MouseListener {
         lbl11.addMouseListener(this);
         lbl12.addMouseListener(this);
         connect();
+        
     }
 
       int seatno=0;
@@ -75,7 +76,7 @@ public class booking extends javax.swing.JFrame implements MouseListener {
         String date = date_form.format(txtdate.getDate());     
         
            txtbill.setText(txtbill.getText() +"***************************************************************\n");
-           txtbill.setText(txtbill.getText() +"****************************Bill............********************\n");
+           txtbill.setText(txtbill.getText() +"****************************Bill********************************\n");
            txtbill.setText(txtbill.getText() +"*****************************************************************\n");
            txtbill.setText(txtbill.getText() + "Customer" + "\t" + customer + "\n");
            txtbill.setText(txtbill.getText() + "SeatNo" + "\t" + seats1 + "\n");
@@ -248,6 +249,7 @@ public class booking extends javax.swing.JFrame implements MouseListener {
             if(k==1)
             {
                JOptionPane.showMessageDialog(this, "Seat Booked ");
+               Bill();
 
             }else
             {
