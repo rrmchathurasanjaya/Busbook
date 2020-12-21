@@ -46,6 +46,9 @@ public class booking extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jCalendar1 = new com.toedter.calendar.JCalendar();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -128,8 +131,16 @@ public class booking extends javax.swing.JFrame {
         jTextField2.setText("jTextField1");
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 180, 30));
 
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setText("Book");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 110, 50));
+        getContentPane().add(jCalendar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, -1, 160));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 290, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -171,6 +182,7 @@ public class booking extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -188,6 +200,8 @@ public class booking extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
