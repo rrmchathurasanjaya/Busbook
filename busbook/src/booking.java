@@ -1,4 +1,4 @@
-`   1       `   `   `   `   1QAZX1`   
+
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -81,6 +81,9 @@ public class booking extends javax.swing.JFrame implements MouseListener {
            txtbill.setText(txtbill.getText() + "SeatNo" + "\t" + seats1 + "\n");
            txtbill.setText(txtbill.getText() + "Price" + "\t" + price + "\n"); 
            txtbill.setText(txtbill.getText() + "date" + "\t" + date + "\n");
+           txtbill.setText(txtbill.getText() + "\n");
+           txtbill.setText(txtbill.getText() +"****************************^^^^^^^^^^^^^^^^^^********************\n");
+           txtbill.setText(txtbill.getText() +"****************************Thank You!! Come Again*****************\n");
        
        }
     /**
