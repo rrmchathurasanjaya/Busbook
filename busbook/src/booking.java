@@ -225,6 +225,11 @@ public class booking extends javax.swing.JFrame implements MouseListener {
             if(k==1)
             {
                JOptionPane.showMessageDialog(this, "Seat Booked ");
+
+            }else
+            {
+              JOptionPane.showMessageDialog(this, "Some this wrong");               
+            
             }
             
            }
