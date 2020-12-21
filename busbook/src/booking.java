@@ -219,6 +219,8 @@ public class booking extends javax.swing.JFrame implements MouseListener {
             pst.setString(1, customer);
             pst.setInt(2, seats1);
             pst.setString(3, price);
+            pst.setString(4, date);
+            int k = pst.executeUpdate();
             
            }
             
