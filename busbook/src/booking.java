@@ -5,6 +5,7 @@ import java.awt.event.MouseListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
@@ -46,6 +47,7 @@ public class booking extends javax.swing.JFrame implements MouseListener {
       int seatno=0;
       Connection con;
       PreparedStatement pst;
+      ResultSet rs;
       
       public void connect() 
       {
@@ -200,6 +202,16 @@ public class booking extends javax.swing.JFrame implements MouseListener {
         
         SimpleDateFormat date_form = new SimpleDateFormat("yyyy-MM-dd");
         String date = date_form.format(txtdate.getDate());
+        
+        try {
+            pst = con.prepareStatement("select * from book where date = ? and seatno = ?");
+            pst.setString(1, date);
+            pst.setInt(2,seats1);
+            
+
+        } catch (SQLException ex) {
+            Logger.getLogger(booking.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
