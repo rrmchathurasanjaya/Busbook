@@ -207,6 +207,20 @@ public class booking extends javax.swing.JFrame implements MouseListener {
             pst = con.prepareStatement("select * from book where date = ? and seatno = ?");
             pst.setString(1, date);
             pst.setInt(2,seats1);
+            rs = pst.executeQuery();
+            
+           if(rs.next() ==true)
+           {
+               JOptionPane.showMessageDialog(this, "This Seat No Already Booked!!!");
+           }
+           else
+           {
+            pst = con.prepareStatement("insert into book(cname,seatno,price,date)values(?,?,?,?)");
+            pst.setString(1, customer);
+            pst.setInt(2, seats1);
+            pst.setString(3, price);
+            
+           }
             
 
         } catch (SQLException ex) {
