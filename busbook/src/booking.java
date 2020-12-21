@@ -119,6 +119,7 @@ public class booking extends javax.swing.JFrame implements MouseListener {
         txtdate = new com.toedter.calendar.JCalendar();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtbill = new javax.swing.JTextArea();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -216,6 +217,10 @@ public class booking extends javax.swing.JFrame implements MouseListener {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 170, 350, 300));
 
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2.setText("Check");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 30, 130, 40));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -304,6 +309,7 @@ public class booking extends javax.swing.JFrame implements MouseListener {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
