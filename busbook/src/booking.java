@@ -2,6 +2,7 @@
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -274,8 +275,8 @@ public class booking extends javax.swing.JFrame implements MouseListener {
         {
            seatno = 12;
         }
-        
        
+      JOptionPane.showMessageDialog(this, seatno);
         
         
         
