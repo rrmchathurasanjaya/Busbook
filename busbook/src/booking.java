@@ -52,7 +52,7 @@ public class booking extends javax.swing.JFrame implements MouseListener {
       public void connect() 
       {
           try{
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
                 con= DriverManager.getConnection("jdbc:mysql://localhost/buss", "root", "");
           }catch (ClassNotFoundException ex){
                
