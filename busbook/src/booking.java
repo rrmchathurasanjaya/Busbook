@@ -1,3 +1,7 @@
+
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,13 +12,14 @@
  *
  * @author Chathura
  */
-public class booking extends javax.swing.JFrame {
+public class booking extends javax.swing.JFrame implements MouseListener {
 
     /**
      * Creates new form booking
      */
     public booking() {
         initComponents();
+        
     }
 
     /**
@@ -30,18 +35,18 @@ public class booking extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtprice = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        lbl2 = new javax.swing.JLabel();
+        lbl1 = new javax.swing.JLabel();
+        lbl4 = new javax.swing.JLabel();
+        lbl3 = new javax.swing.JLabel();
+        lbl6 = new javax.swing.JLabel();
+        lbl5 = new javax.swing.JLabel();
+        lbl12 = new javax.swing.JLabel();
+        lbl11 = new javax.swing.JLabel();
+        lbl10 = new javax.swing.JLabel();
+        lbl9 = new javax.swing.JLabel();
+        lbl8 = new javax.swing.JLabel();
+        lbl7 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         txtcust = new javax.swing.JTextField();
@@ -68,53 +73,53 @@ public class booking extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("2");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
+        lbl2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl2.setText("2");
+        jPanel1.add(lbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("1");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
+        lbl1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl1.setText("1");
+        jPanel1.add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("4");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, -1, -1));
+        lbl4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl4.setText("4");
+        jPanel1.add(lbl4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("3");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, -1, -1));
+        lbl3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl3.setText("3");
+        jPanel1.add(lbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("6");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, -1, -1));
+        lbl6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl6.setText("6");
+        jPanel1.add(lbl6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("5");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
+        lbl5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl5.setText("5");
+        jPanel1.add(lbl5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setText("12");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, -1, -1));
+        lbl12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl12.setText("12");
+        jPanel1.add(lbl12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setText("11");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, -1));
+        lbl11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl11.setText("11");
+        jPanel1.add(lbl11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setText("10");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
+        lbl10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl10.setText("10");
+        jPanel1.add(lbl10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel12.setText("9");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
+        lbl9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl9.setText("9");
+        jPanel1.add(lbl9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel13.setText("8");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
+        lbl8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl8.setText("8");
+        jPanel1.add(lbl8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel14.setText("7");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
+        lbl7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl7.setText("7");
+        jPanel1.add(lbl7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 250, 140));
 
@@ -182,26 +187,51 @@ public class booking extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lbl10;
+    private javax.swing.JLabel lbl11;
+    private javax.swing.JLabel lbl12;
+    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lbl3;
+    private javax.swing.JLabel lbl4;
+    private javax.swing.JLabel lbl5;
+    private javax.swing.JLabel lbl6;
+    private javax.swing.JLabel lbl7;
+    private javax.swing.JLabel lbl8;
+    private javax.swing.JLabel lbl9;
     private javax.swing.JTextArea txtbill;
     private javax.swing.JTextField txtcust;
     private com.toedter.calendar.JCalendar txtdate;
     private javax.swing.JTextField txtprice;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
