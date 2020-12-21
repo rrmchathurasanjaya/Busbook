@@ -63,6 +63,21 @@ public class booking extends javax.swing.JFrame implements MouseListener {
         }
       
       }
+      
+       public void Bill()
+       
+       {
+        String customer = txtcust.getText();
+        int seats1 = seatno;
+        String price = txtprice.getText();
+        
+        SimpleDateFormat date_form = new SimpleDateFormat("yyyy-MM-dd");
+        String date = date_form.format(txtdate.getDate());     
+        
+           txtbill.setText(txtbill.getText() +"***************************************************************\n");
+           txtbill.setText(txtbill.getText() +"****************************Bill********************\n");
+       
+       }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
