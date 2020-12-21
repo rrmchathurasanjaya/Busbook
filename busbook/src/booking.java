@@ -132,13 +132,13 @@ public class booking extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("Book");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 110, 50));
-        getContentPane().add(txtdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, -1, 160));
+        getContentPane().add(txtdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 360, 170));
 
         txtbill.setColumns(20);
         txtbill.setRows(5);
         jScrollPane1.setViewportView(txtbill);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, 290, 300));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 170, 350, 300));
 
         pack();
         setLocationRelativeTo(null);
