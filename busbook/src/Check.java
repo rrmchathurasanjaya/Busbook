@@ -1,3 +1,12 @@
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,7 +24,26 @@ public class Check extends javax.swing.JFrame {
      */
     public Check() {
         initComponents();
+       
     }
+      Connection con;
+      PreparedStatement pst;
+      ResultSet rs;
+      
+      public void connect() 
+      {
+          try{
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                con= DriverManager.getConnection("jdbc:mysql://localhost/buss", "root", "");
+          }catch (ClassNotFoundException ex){
+               
+                Logger.getLogger(booking.class.getName()).log(Level.SEVERE, null ,ex);
+          
+          } catch (SQLException ex) {
+            Logger.getLogger(booking.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
+      }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,13 +69,10 @@ public class Check extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Customer_Name", "SeatNo", "Price"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -55,11 +80,20 @@ public class Check extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
 
         jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, -1, 30));
         getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 250, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
