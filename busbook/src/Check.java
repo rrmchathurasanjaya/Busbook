@@ -4,6 +4,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -58,7 +59,7 @@ public class Check extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        txtdate = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -86,13 +87,27 @@ public class Check extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, -1, 30));
-        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 250, 30));
+        getContentPane().add(txtdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 250, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            
+          SimpleDateFormat date_form = new SimpleDateFormat("yyyy-MM-dd");
+          String date = date_form.format(txtdate.getDate());
         
+        try {
+            pst = con.prepareStatement("select * from book where date = ?");
+             pst.setString(1, date);
+             rs = pst.executeQuery();  
+             
+            if(rs.)
+             
+        } catch (SQLException ex) {
+            Logger.getLogger(Check.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -132,9 +147,9 @@ public class Check extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private com.toedter.calendar.JDateChooser txtdate;
     // End of variables declaration//GEN-END:variables
 }
