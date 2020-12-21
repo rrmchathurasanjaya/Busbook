@@ -199,6 +199,7 @@ public class booking extends javax.swing.JFrame implements MouseListener {
         String price = txtprice.getText();
         
         SimpleDateFormat date_form = new SimpleDateFormat("yyyy-MM-dd");
+        String date = date_form.format(txtdate.getDate());
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
