@@ -19,7 +19,18 @@ public class booking extends javax.swing.JFrame implements MouseListener {
      */
     public booking() {
         initComponents();
-        
+        lbl1.addMouseListener(this);
+        lbl2.addMouseListener(this);
+        lbl3.addMouseListener(this);
+        lbl4.addMouseListener(this);
+        lbl5.addMouseListener(this);
+        lbl6.addMouseListener(this);
+        lbl7.addMouseListener(this);
+        lbl8.addMouseListener(this);
+        lbl9.addMouseListener(this);
+        lbl10.addMouseListener(this);
+        lbl11.addMouseListener(this);
+        lbl12.addMouseListener(this);
     }
 
     /**
@@ -212,6 +223,13 @@ public class booking extends javax.swing.JFrame implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        
+        if(e.getSource() == lbl1  )
+        
+        
+        
+        
+        
         
     }
 
