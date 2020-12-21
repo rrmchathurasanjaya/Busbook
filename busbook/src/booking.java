@@ -210,6 +210,7 @@ public class booking extends javax.swing.JFrame implements MouseListener {
         getContentPane().add(txtdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 180, 360, 170));
 
         txtbill.setColumns(20);
+        txtbill.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         txtbill.setRows(5);
         jScrollPane1.setViewportView(txtbill);
 
