@@ -2,6 +2,10 @@
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -38,17 +42,21 @@ public class booking extends javax.swing.JFrame implements MouseListener {
     }
 
       int seatno=0;
+      Connection con;
+      PreparedStatement pst;
       
       public void connect() 
       {
           try{
                 Class.forName("com.mysql.jdbc.Driver");
-      
+                con= DriverManager.getConnection("jdbc:mysql://localhost/buss", "root", "");
           }catch (ClassNotFoundException ex){
                
                 Logger.getLogger(booking.class.getName()).log(Level.SEVERE, null ,ex);
           
-          }
+          } catch (SQLException ex) {
+            Logger.getLogger(booking.class.getName()).log(Level.SEVERE, null, ex);
+        }
       
       }
     /**
