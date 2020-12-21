@@ -2,6 +2,8 @@
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /*
@@ -36,6 +38,19 @@ public class booking extends javax.swing.JFrame implements MouseListener {
     }
 
       int seatno=0;
+      
+      public void connect() 
+      {
+          try{
+                Class.forName("com.mysql.jdbc.Driver");
+      
+          }catch (ClassNotFoundException ex){
+               
+                Logger.getLogger(booking.class.getName()).log(Level.SEVERE, null ,ex);
+          
+          }
+      
+      }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
